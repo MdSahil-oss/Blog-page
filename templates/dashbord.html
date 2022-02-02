@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body %}
+   <!-- Page Header-->
+   <header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/home-bg.jpg')}}')">
+      <div class="container position-relative px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div  class="col-md-10 col-lg-8 col-xl-7">
+                  <div class="site-heading">
+                      <h1>Clean Blog</h1>
+                      <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <div style="width: 80%; margin: auto;">
+    <h2>Basic action</h2>
+    <a href="/postAdder"><button class="btn btn-primary">Add a Post</button></a>
+    <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+  </div>
+  <hr>
+  <div style="width: 80%; margin: auto;">
+    <h2>Upload a File</h2>
+    <form action="/uploader" method="post" enctype="multipart/form-data">
+      <input type="file" name="file1" >
+      <input type="submit" class="btn btn-primary" value="Upload" >
+    </form>
+  </div>
+  <table class="table table-borderless" style="font-size: 17px; width: 80%; margin:auto;">
+    <thead>
+      <tr>
+        <th scope="col">Sno.</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <hr>
+    <tbody>
+      {% for post in posts %}
+      <tr>
+        <th scope="row">{{post.Sno}}</th>
+        <td>{{post.Title}}</td>
+        <td>{{post.Content}}</td>
+        <td>{{post.date}}</td>
+        <td><a href="/editable/{{post.Sno}}"><button class="btn btn-primary">Edit</button></a></td>
+        <td><a href="/delete/{{post.Sno}}"><button class="btn btn-primary">Delete</button></a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{
+    "params":{
+        "web_name":"myBlog",
+        "localserver":"True",
+        "local_uri":"mysql://root:@localhost/usingflask",
+        "prof_uri" :"add_production_uri",
+        "tweeter_url" :"https://twitter.com/?lang=en",
+        "facebook_url":"https://www.facebook.com/",
+        "git_url":"https://github.com/",
+        "userID" : "Mohdssahil13@gmail.com",
+        "password": "0B71S@13",
+        "no_of_posts":3,
+        "location_of_Saving_file":"C:\\Flask\\",
+        "first-post-content":"What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has? Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        
+    }
+}
